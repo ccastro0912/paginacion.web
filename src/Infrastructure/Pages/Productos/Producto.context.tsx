@@ -88,7 +88,7 @@ export const ProductoProvider = ({ children } : IProps) => {
                     type: 'UpdatePaginacion', 
                     payload: {
                         paginacion: data.data.paginacion,
-                        productos: data.data.producto
+                        productos: data.data.producto ? data.data.producto : []
                     } })
             }else{
                 alert(data.mensaje)
